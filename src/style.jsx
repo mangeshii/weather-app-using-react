@@ -55,7 +55,7 @@ const styles = makeStyles((theme) => ({
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
     },
-    dust:{
+    dust: {
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0, 0.2), rgba(0,0,0, 0.75)),url(${dust})`,
         height: "100vh",
         backgroundRepeat: "no-repeat",
@@ -90,7 +90,8 @@ const styles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         padding: "20px",
-        height: "10vh",
+        height: "20vh",
+
         color: "white",
     },
     inputField: {
@@ -98,15 +99,21 @@ const styles = makeStyles((theme) => ({
         border: "none",
         display: "block",
         outline: "none",
-        width: "400px",
-        height: "30px",
-        margin: "0 auto",
+        width: "500px",
+        [theme.breakpoints.down('sm')]: {
+            width:'250px'
+          },
+        height: "60px",
+        [theme.breakpoints.down('sm')]: {
+            height:'50px'
+          },
+        margin: "3% auto",
         padding: "10px",
         color: "#333",
         boxShadow: "0 2px 10px 1px rgba(0,0,0,0.5)",
     },
     weatherinfo: {
-        height: "85vh",
+        height: "74vh",
         display: "flex",
         justifyContent: "center",
     },
@@ -123,9 +130,12 @@ const styles = makeStyles((theme) => ({
         paddingTop: "30px",
     },
     city: {
-        margin: "0",
+        marginTop: "5%",
         padding: "0",
-        fontSize: "32px",
+        fontSize: "4vw",
+        [theme.breakpoints.down('sm')]: {
+           fontSize:'10vw'
+          },
         color: "white",
         fontWeight: "500",
         textShadow: "2px 2px rgba(50,50,70,0.5)",
@@ -133,7 +143,10 @@ const styles = makeStyles((theme) => ({
     time: {
         margin: "0",
         padding: "0",
-        fontSize: "20px",
+        fontSize: "2vw",
+        [theme.breakpoints.down('sm')]: {
+            fontSize:'6vw'
+          },
         color: "white",
         fontWeight: "400",
         fontStyle: "italic",
@@ -147,7 +160,10 @@ const styles = makeStyles((theme) => ({
         display: "inline-block",
         backgroundColor: "rgba(255,255,255,0.2)",
         color: "white",
-        fontSize: "50px",
+        fontSize: "5vw",
+        [theme.breakpoints.down('sm')]: {
+            fontSize:'10vw'
+          },
         padding: "15px 25px",
         borderRadius: "16px",
         textShadow: "2px 2px rgba(50,50,70,0.5)",
@@ -155,7 +171,10 @@ const styles = makeStyles((theme) => ({
         boxShadow: "3px 6px rgba(0,0,0,0.2)",
     },
     description: {
-        fontSize: "30px",
+        fontSize: "3vw",
+        [theme.breakpoints.down('sm')]: {
+            fontSize:'10vw'
+          },
         fontWeight: "600",
         textShadow: "2px 2px rgba(50,50,70,0.5)",
         color: "white",
